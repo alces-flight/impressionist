@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- tests/**/*`.split("\n")
   s.require_path  = 'lib'
 
-  s.add_dependency "friendly_id"
   s.add_dependency 'nokogiri', RUBY_VERSION < '2.1.0' ? '~> 1.6.0' : '~> 1'
   s.add_dependency 'rails', '>= 3.2.15'
 
@@ -26,4 +25,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'sqlite3', '~> 1.4'
+  s.add_development_dependency 'friendly_id'
 end
