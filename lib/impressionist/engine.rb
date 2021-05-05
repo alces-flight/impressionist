@@ -12,9 +12,10 @@ module Impressionist
     require "impressionist/controllers/mongoid/impressionist_controller.rb" if orm == :mongoid.to_s
 
     ActiveSupport.on_load(:action_controller) do
-     include ImpressionistController::InstanceMethods
-     extend ImpressionistController::ClassMethods
-   end
+      require_relative '../../app/controllers/impressionist_controller'
+      include ImpressionistController::InstanceMethods
+      extend ImpressionistController::ClassMethods
+    end
   end
 
 
